@@ -13,7 +13,8 @@
 // // display(result);
 
 function some(data) {
-    console.log(data);
+    // console.log(data);
+    return data;
 }
 
 function calculator(arr,callback) {
@@ -21,6 +22,8 @@ function calculator(arr,callback) {
     for(let i=0;i<arr.length;i++) {
         sum += arr[i];
     }
-    callback(sum);
+    if(callback) callback(sum);
+    console.log("Addition");     
+    return sum;  
 }
 calculator([1,2,3,4,5],some);

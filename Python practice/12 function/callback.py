@@ -1,4 +1,4 @@
-def simple(a, b,func):
+def simple(a, b, func):
     return func(a, b)
 
 def add(a, b):

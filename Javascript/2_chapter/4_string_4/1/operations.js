@@ -19,3 +19,9 @@ while (arr[Length] !== undefined) {
     Length++;
 }
 console.log(Length); // Output: 5
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+    arr[i] = arr[i] * 2;
+}
+console.log(arr);

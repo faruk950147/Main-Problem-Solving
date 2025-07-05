@@ -1,9 +1,9 @@
 # Closure in Python (Function Closures)
-
 # Closure means:
 # A inner function, which can hold outer function's variable or state, even after outer function execution has finished.
-
 # Example:
+
+# jodi outer function er variable k inner function er moddhe hold kore rakhe
 
 def outer(x):
     def inner(y):

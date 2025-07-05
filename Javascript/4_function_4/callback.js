@@ -1,5 +1,5 @@
-function simple(a, b, func) {
-    return func(a, b);
+function simple(a, b, callback) {
+    return callback(a, b);
 }
 function add(a, b) {
     return a + b;

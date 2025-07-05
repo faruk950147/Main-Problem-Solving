@@ -4,7 +4,13 @@ sum = 0;
 //     console.log("Value: " + value + " Index: " + index + " Array: " + array);
 // });
 
-arr.forEach(function(value) {
-    sum += value;
-});
-console.log(sum);
+// arr.forEach(function(value) {
+//     sum += value;
+// });
+// console.log(sum);
+
+function forEach(arr,callback) {
+    for (let i = 0; i < arr.length; i++) {
+        callback(arr[i], i, arr);
+    }
+}

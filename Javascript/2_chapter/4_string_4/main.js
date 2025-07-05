@@ -7,9 +7,13 @@
 // // let lowerStr = str.toLowerCase();
 // // console.log("Lowercase String:", lowerStr);
 let str1 = "Hello, World!";
+// console.log(str1.split(" ")); // if u want to split space then use " " else use "" and any other character
+// join is in array method not in string method
+console.log(str1.join(" A ")); // is in array if u want to join space then use " " else use "" and any other character
+// console.log(str1.length); // to find the length of the string
 // console.log(str1.slice(0, 5));     // "Hello"
 //console.log(str1.slice(7));        // "World!"
-console.log(str1.slice(-6));       // "World!"
+// console.log(str1.slice(-6));       // "World!"
 // console.log(str1.slice(-6, -1));   // "World"
 // console.log(str.slice(7, 12));    // "World"
 // console.log(str.slice(0, -1));    // "Hello, World"
@@ -21,6 +25,7 @@ console.log(str1.slice(-6));       // "World!"
 
 
 // let str = "Hello";
+
 // let reversed = str.split("").reverse().join("");
 // console.log(reversed);  // "olleH"
 

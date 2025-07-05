@@ -11,6 +11,6 @@ arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110]
     
 # print(len(arr)) # print array length
 print(arr[len(arr) - 1]) # print last element arr[11] = 110
-# print(len(arr) - 1) # print last element index arr[11-1] = 10
+# print(len(arr) - 1) # print array length arr[11-1] = 10
 
 

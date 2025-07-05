@@ -22,6 +22,7 @@
 # # reverse
 # print(str1[::-1])
 str1 = "Hello World"
+print(str1.sort(reverse=True))
 # print(str1[0:1])
 # print(str1[:4]) # index 0 to 4
 # print(str1[0:]) # index 1 to 3

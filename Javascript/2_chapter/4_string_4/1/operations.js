@@ -13,15 +13,22 @@
 arr = [1, 2, 3, 4, 5];
 console.log(arr.length); // Output: 5
 
-let Length = 0;
+// let Length = 0;
 
-while (arr[Length] !== undefined) {
-    Length++;
-}
-console.log(Length); // Output: 5
+// while (arr[Length] !== undefined) {
+//     Length++;
+// }
+// console.log(Length); // Output: 5
 
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+//     arr[i] = arr[i] * 2;
+// }
+// console.log(arr);
+sum = 0;    
 for (let i = 0; i < arr.length; i++) {
     console.log(arr[i]);
-    arr[i] = arr[i] * 2;
+    sum += arr[i];
 }
-console.log(arr);
+console.log(sum);
+

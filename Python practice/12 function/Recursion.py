@@ -10,3 +10,10 @@ def recursive_factorial(n):
         return 1
     return n * recursive_factorial(n - 1)
 print(recursive_factorial(5))
+
+def sayHello(n):
+    if n == 0:
+        return
+    print("Hello")
+    sayHello(n - 1)
+sayHello(5)

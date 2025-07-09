@@ -10,7 +10,7 @@ def outer(x):
         return x + y
     return inner
 
-closure_func = outer(10)
+closure_func = outer(10) # eivabe outer function er variable k inner function er moddhe hold kore rakhe mane inner function return korbe  function er variable k hold kore rakhe
 print(closure_func(5))   # Output: 15
 
 # Here closure_func is a closure, because it holds the value of x=10 in memory.

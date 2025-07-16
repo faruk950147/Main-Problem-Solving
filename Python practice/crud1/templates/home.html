@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <title>CRUD</title>
+</head>
+<body> 
+    <header id="header">
+        <div class="header container">
+            <div class="navBar">
+                <div class="brand"><a href="#"><h1><span>O</span>ma<span>r</span> F<span>a</span>ru<span>k</span></h1></a></div>
+                <div class="navList">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Project</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div id="hero">
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-lg-3">
+                    <h4 class="text-center">Student Add</h4>
+                    <hr>
+                    <form action="{% url 'SavedView' %}" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="form-control btn btn-success my-3">Save Student</button>
+                    </form>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-8">
+                    <h4 class="text-center">Student Table</h4>
+                    <hr>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Department</th>
+                                <th>Phone</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for student in students %}
+                            <tr>
+                                <td>{{ student.id }}</td>
+                                <td>{{ student.name }}</td>
+                                <td>{{ student.department }}</td>
+                                <td>{{ student.phone }}</td>
+                                <td>
+                                    <a class="btn btn-warning btn-sm" href="{% url 'EditedView' student.id %}">Edit</a>
+                                    <form action="{% url 'DeletedView' student.id %}" method="POST" style="display:inline;">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+</body>
+</html>

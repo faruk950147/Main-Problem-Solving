@@ -8,7 +8,7 @@ class HomeView(generic.View):
         students = Student.objects.all()
         form = StudentForm()
         return render(request, 'home.html', {'students': students, 'form': form})
-    
+{% comment %} home {% endcomment %}
 
 class SavedView(generic.View):
     def post(self, request, id=None):
@@ -17,6 +17,7 @@ class SavedView(generic.View):
         if form.is_valid():
             form.save()
         return redirect('HomeView')
+{% comment %} form create {% endcomment %}
     
 class EditedView(generic.View):
     def post(self, request, id):
@@ -27,40 +28,35 @@ class EditedView(generic.View):
             return redirect('HomeView')
         else:
             return redirect('HomeView')
+{% comment %} form edit {% endcomment %}
 
 class DeletedView(generic.View):
     def post(self, request, id):
         student = get_object_or_404(Student, id=id)
         student.delete()
         return redirect('HomeView')
+{% comment %} form delete {% endcomment %}
 
-
-
-
-class HomeView(generic.View):
-    def get(self, request):
-        students = Student.objects.all()
-        return render(request, 'home.html', {'students': students})
     
 class SavedView(generic.View):
     def post(self, request, id=None):
-            name = request.POST.get('name')
-            department = request.POST.get('department')
-            phone = request.POST.get('phone')
+        name = request.POST.get('name')
+        department = request.POST.get('department')
+        phone = request.POST.get('phone')
         
-            if id:
-                student = get_object_or_404(Student, id=id)
-                student.name = name
-                student.department = department
-                student.phone = phone
-                student.save()
-            else:
-                Student.objects.create(name=name, department=department, phone=phone)
+        if id:
+            student = get_object_or_404(Student, id=id)
+            student.name = name
+            student.department = department
+            student.phone = phone
+            student.save()
+        else:
+            Student.objects.create(name=name, department=department, phone=phone)
         
-            return redirect('HomeView')
+        return redirect('HomeView')
+{% comment %} form create and edit {% endcomment %}
     
-    
-class EditedView(generic.View):
+class EditedView(View):
     def get(self, request, id):
         student = get_object_or_404(Student, id=id)
         form = StudentForm(instance=student)
@@ -71,14 +67,38 @@ class EditedView(generic.View):
         name = request.POST.get('name')
         department = request.POST.get('department')
         phone = request.POST.get('phone')
-    
-        student.name = name
-        student.department = department
-        student.phone = phone
-        student.save()
-        return redirect('HomeView')
-    
-    
+        if name or department or phone:
+            student.name = name
+            student.department = department
+            student.phone = phone
+            student.save()
+            return redirect('HomeView')
+        else:
+            return redirect('HomeView')
+
+
+{% comment %} form edit {% endcomment %}  
+ 
+# Single page create and Edit and Delete View 
+
+class EditedView(View):
+    def post(self, request, id):
+        student = get_object_or_404(Student, id=id)
+        name = request.POST.get('name')
+        department = request.POST.get('department')
+        phone = request.POST.get('phone')
+        if name or department or phone:
+            student.name = name
+            student.department = department
+            student.phone = phone
+            student.save()
+            return redirect('HomeView')
+        else:
+            return redirect('HomeView')
+ 
+{% comment %} no extra pages {% endcomment %}
+
+{% comment %} form delete {% endcomment %}
 class DeletedView(generic.View):
     def post(self, request, id):
         student = get_object_or_404(Student, id=id)

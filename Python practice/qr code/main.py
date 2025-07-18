@@ -1,11 +1,7 @@
 import qrcode
 
-# 1. Generate QR Code
-img = qrcode.make("https://www.youtube.com")
-img.save("qrimg/youtube.png")
-
-# 2. Decode QR Code
-
-
-
-
+with open("L:\\Programming\\Python\\Main Problem Solving\\Python practice\\qr code\\websites_list.csv", "r") as file:
+    for line in file:
+        data = line.strip().split(",")
+        # print(data[0], data[1])
+        qrcode.make(data[1]).save(f"L:\\Programming\\Python\\Main Problem Solving\\Python practice\\qr code\\qrimg\\{data[0]}.png", scale=10)

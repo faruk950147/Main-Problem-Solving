@@ -1,6 +1,6 @@
 import logging
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG, filename="log.txt")
 
 logging.info("Hello World!")
 logging.warning("Hello World!")

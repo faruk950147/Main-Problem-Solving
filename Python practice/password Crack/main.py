@@ -16,25 +16,28 @@ import pikepdf
 #             except Exception as e:
 #                 print("Exception", str(e))
 
+# Ensure the PDF is password protected
+# pdfPath = r"sample.pdf"
+
+# try:
+#     with pikepdf.open(pdfPath) as pdf:
+#         print("PDF is not password protected")
+# except PasswordError:
+#     print("PDF is password protected")
+# except Exception as e:
+#     print("Exception", str(e))
 
 
-# with open("warehouse.txt", "r") as f:
-#     count = 0
-#     for password in f:
-#         password = password.strip()
-#         count += 1
-#         try:
-#             pikepdf.open("sample.pdf", password=password)
-#             print(f"Password Found: {password}")
-#             break
-#         except Exception as e:
-#             print(f"{count} : {password} : Password Not Found")
+with open("warehouse.txt", "r") as f:
+    count = 0
+    for password in f:
+        password = password.strip()
+        count += 1
+        try:
+            pikepdf.open("sample.pdf", password=password)
+            print(f"Password Found: {password}")
+            break
+        except Exception as e:
+            print(f"{count} : {password} : Password Not Found")
 
 
-pdfPath = r"L:\\Programming\\Python\\Main Problem Solving\\Python practice\\password Crack\\sample.pdf"
-
-try:
-    with pikepdf.open(pdfPath) as pdf:
-        print("PDF is not password protected")
-except PasswordError:
-    print("PDF is password protected")

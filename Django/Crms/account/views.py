@@ -15,16 +15,15 @@ from django.utils.encoding import force_str
 from django.utils.http import urlsafe_base64_decode
 from validate_email import validate_email
 from account.mixins import LogoutRequiredMixin
-from account.utils import account_activation_token, ActivationEmailSender
+from account.utils import account_activation_token
 from account.models import Profile
 import json
 import random
-from django.core.cache import cache
 User = get_user_model()
-from account.utils import account_activation_token, EmailThread, ActivationEmailSender
-OTP_EXPIRATION_TIME = 300  # 5 minutes in seconds
 import logging
 logger = logging.getLogger(__name__)
+
+OTP_EXPIRATION_TIME = 300  # 5 minutes in seconds
 
 # Create your views here.   
 @method_decorator(never_cache, name='dispatch')
@@ -56,52 +55,103 @@ class ActivationView(generic.View):
 @method_decorator(never_cache, name='dispatch')
 class SignUpView(LogoutRequiredMixin, generic.View):
     def get(self, request):
+        try:
+            pass
+        except Exception as e:
+            logger.error(f"{e}")
+            return redirect('sign')
         
         return render(request, 'account/register.html')
 
     def post(self, request):
+        try:
+            pass
+        except Exception as e:
+            logger.error(f"{e}")
+            return redirect('sign')
         
         return render(request, 'account/register.html')
 
 @method_decorator(never_cache, name='dispatch')
 class SignInView(LogoutRequiredMixin, generic.View):
     def get(self, request):
+        try:
+            pass
+        except Exception as e:
+            logger.error(f"{e}")
+            return redirect('sign')
+        
         return render(request, 'account/login.html')
 
     def post(self, request):
+        try:
+            pass
+        except Exception as e:
+            logger.error(f"{e}")
+            return redirect('sign')
+        
         return render(request, 'account/login.html')
 
 @method_decorator(never_cache, name='dispatch')    
 class SignOutView(LoginRequiredMixin, generic.View):
     login_url = reverse_lazy('sign')
     def get(self, request):
-        logout(request)
-        messages.success(request, 'You are sign out successfully!')
-        return redirect('sign')
+        try:
+            logout(request)
+            messages.success(request, 'You are sign out successfully!')
+            return redirect('sign')
+        except Exception as e:
+            logger.error(f"{e}")
+            return redirect('sign')
     
 @method_decorator(never_cache, name='dispatch')
 class ChangesPasswordView(LoginRequiredMixin, generic.View):
     def get(self, request):
+        try:
+            pass
+        except Exception as e:
+            logger.error(f"{e}")
+            return redirect('sign')
         
         return render(request, 'account/changes-password.html')
 
     def post(self, request):
+        try:
+            pass
+        except Exception as e:
+            logger.error(f"{e}")
+            return redirect('sign')
         
         return render(request, 'account/changes-password.html')
 
 @method_decorator(never_cache, name='dispatch')    
 class SendOTPView(LogoutRequiredMixin, generic.View):
     def post(self, request):
+        try:
+            pass
+        except Exception as e:
+            logger.error(f"{e}")
+            return redirect('sign')
         
         return render(request, 'account/send-otp.html')
     
 @method_decorator(never_cache, name='dispatch')    
 class ResetPasswordView(LogoutRequiredMixin, generic.View):
     def get(self, request):
+        try:
+            pass
+        except Exception as e:
+            logger.error(f"{e}")
+            return redirect('sign')
         
         return render(request, 'account/reset-password.html')
     
     def post(self, request):
+        try:
+            pass
+        except Exception as e:
+            logger.error(f"{e}")
+            return redirect('sign')
         
         return render(request, 'account/reset-password.html')
         
@@ -109,8 +159,18 @@ class ResetPasswordView(LogoutRequiredMixin, generic.View):
 class ProfileView(LoginRequiredMixin, generic.View):
     login_url = reverse_lazy('sign')
     def get(self, request):
+        try:
+            pass
+        except Exception as e:
+            logger.error(f"{e}")
+            return redirect('sign')
         
         return render(request, 'account/profile.html')
     def post(self, request):
+        try:
+            pass
+        except Exception as e:
+            logger.error(f"{e}")
+            return redirect('sign')
         
         return render(request, 'account/profile.html')

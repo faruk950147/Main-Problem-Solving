@@ -1,4 +1,3 @@
-from django.forms import ValidationError
 from django.views import generic
 from django.urls import reverse_lazy
 from django.contrib import messages
@@ -6,19 +5,12 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import never_cache
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth import get_user_model
-from django.http import JsonResponse, HttpResponseRedirect, HttpResponse
-from django.core.mail import EmailMessage
-from django.conf import settings
 from django.utils.encoding import force_str
 from django.utils.http import urlsafe_base64_decode
-from validate_email import validate_email
+from django.contrib.auth import logout
 from account.mixins import LogoutRequiredMixin
 from account.utils import account_activation_token
-from account.models import Profile
-import json
-import random
 User = get_user_model()
 import logging
 logger = logging.getLogger(__name__)

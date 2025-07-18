@@ -8,7 +8,7 @@ from django.views.decorators.cache import never_cache
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth import get_user_model
-from django.http import JsonResponse, HttpResponseRedirect
+from django.http import JsonResponse, HttpResponseRedirect, HttpResponse
 from django.core.mail import EmailMessage
 from django.conf import settings
 from django.utils.encoding import force_str
@@ -26,6 +26,16 @@ logger = logging.getLogger(__name__)
 OTP_EXPIRATION_TIME = 300  # 5 minutes in seconds
 
 # Create your views here.   
+
+
+
+def test_log(request):
+    logger.debug("Debug Message from View")
+    logger.info("Info Message from View")
+    logger.error("Error Message from View")
+    return HttpResponse("Log successfully written.")
+
+
 @method_decorator(never_cache, name='dispatch')
 class ActivationView(generic.View):
     def get(self, request, uidb64, token):

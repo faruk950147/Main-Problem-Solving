@@ -26,16 +26,6 @@ logger = logging.getLogger(__name__)
 OTP_EXPIRATION_TIME = 300  # 5 minutes in seconds
 
 # Create your views here.   
-
-
-
-def test_log(request):
-    logger.debug("Debug Message from View")
-    logger.info("Info Message from View")
-    logger.error("Error Message from View")
-    return HttpResponse("Log successfully written.")
-
-
 @method_decorator(never_cache, name='dispatch')
 class ActivationView(generic.View):
     def get(self, request, uidb64, token):

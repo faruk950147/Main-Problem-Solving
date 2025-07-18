@@ -1,6 +1,3 @@
-import os
-from turtle import update
-
 # mode
 # r - read
 # w - write
@@ -16,6 +13,8 @@ from turtle import update
 # tell()
 # write()
 # writelines()
+
+# why gap between cursor and data because we are hit enter after typing data where python get \n new line character
 
 # open file and read
 # file = open(r"L:\\Programming\\Python\\Main Problem Solving\\Python practice\\13 filleHandle\\dataFile\\file1.txt", "r")

@@ -1,7 +1,0 @@
-INFO:root:Hello World!
-WARNING:root:Hello World!
-ERROR:root:Hello World!
-CRITICAL:root:Hello World!
-DEBUG:root:Hello World!
-ERROR:root:Hello World!
-NoneType: None

@@ -14,8 +14,8 @@ import logging
 logger = logging.getLogger(__name__)
 
 # Create your views here.
-
-class TasksView(LoginRequiredMixin, generic.View):
+@method_decorator(never_cache, name='dispatch')
+class TasksView(generic.View):
     def get(self, request):
         try:
             pass

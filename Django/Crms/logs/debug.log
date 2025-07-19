@@ -20611,3 +20611,285 @@ DEBUG 2025-07-19 00:56:31,780 autoreload File L:\Programming\Python\Main Problem
 DEBUG 2025-07-19 00:56:31,781 autoreload File L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\contrib\auth\migrations\0002_alter_permission_name_max_length.py first seen with mtime 1752842007.7534056
 DEBUG 2025-07-19 00:56:31,785 autoreload File L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\contrib\auth\migrations\0006_require_contenttypes_0002.py first seen with mtime 1752842007.7534056
 DEBUG 2025-07-19 00:56:31,787 autoreload File L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\contrib\sessions\migrations\0001_initial.py first seen with mtime 1752842011.694756
+DEBUG 2025-07-19 00:57:41,578 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\urls\resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'tasks.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\tasks\\urls.py'> (None:None) ''>, <URLPattern '' [name='taskview']>], [<URLResolver <module 'account.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\account\\urls.py'> (None:None) 'account/'>], [<URLResolver <module 'rest_framework.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\env\\Lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLPattern 'api/token/' [name='token_obtain_pair']>], [<URLPattern 'api/token/refresh/' [name='token_refresh']>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'accounts/login/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'account.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\account\\urls.py'> (None:None) 'account/'>
+DEBUG 2025-07-19 00:57:41,584 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\urls\resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'tasks.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\tasks\\urls.py'> (None:None) ''>, <URLPattern '' [name='taskview']>], [<URLResolver <module 'account.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\account\\urls.py'> (None:None) 'account/'>], [<URLResolver <module 'rest_framework.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\env\\Lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLPattern 'api/token/' [name='token_obtain_pair']>], [<URLPattern 'api/token/refresh/' [name='token_refresh']>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'accounts/login/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'rest_framework.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\env\\Lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>
+DEBUG 2025-07-19 00:57:41,590 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\urls\resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'tasks.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\tasks\\urls.py'> (None:None) ''>, <URLPattern '' [name='taskview']>], [<URLResolver <module 'account.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\account\\urls.py'> (None:None) 'account/'>], [<URLResolver <module 'rest_framework.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\env\\Lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLPattern 'api/token/' [name='token_obtain_pair']>], [<URLPattern 'api/token/refresh/' [name='token_refresh']>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'accounts/login/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+WARNING 2025-07-19 00:57:41,598 log Not Found: /accounts/login/
+WARNING 2025-07-19 00:57:41,598 basehttp "GET /accounts/login/?next=/ HTTP/1.1" 404 3039
+DEBUG 2025-07-19 00:57:42,146 autoreload File L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\contrib\messages\storage\cookie.py first seen with mtime 1752842009.3763871
+DEBUG 2025-07-19 00:57:42,157 autoreload File L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\contrib\messages\storage\fallback.py first seen with mtime 1752842009.3763871
+DEBUG 2025-07-19 00:57:42,161 autoreload File L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\contrib\sessions\serializers.py first seen with mtime 1752842011.4537404
+DEBUG 2025-07-19 00:57:42,165 autoreload File L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\contrib\messages\storage\session.py first seen with mtime 1752842009.3763871
+DEBUG 2025-07-19 00:57:42,848 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\urls\resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'tasks.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\tasks\\urls.py'> (None:None) ''>, <URLPattern '' [name='taskview']>], [<URLResolver <module 'account.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\account\\urls.py'> (None:None) 'account/'>], [<URLResolver <module 'rest_framework.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\env\\Lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLPattern 'api/token/' [name='token_obtain_pair']>], [<URLPattern 'api/token/refresh/' [name='token_refresh']>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'accounts/login/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'account.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\account\\urls.py'> (None:None) 'account/'>
+DEBUG 2025-07-19 00:57:42,852 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\urls\resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'tasks.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\tasks\\urls.py'> (None:None) ''>, <URLPattern '' [name='taskview']>], [<URLResolver <module 'account.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\account\\urls.py'> (None:None) 'account/'>], [<URLResolver <module 'rest_framework.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\env\\Lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLPattern 'api/token/' [name='token_obtain_pair']>], [<URLPattern 'api/token/refresh/' [name='token_refresh']>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'accounts/login/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'rest_framework.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\env\\Lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>
+DEBUG 2025-07-19 00:57:42,862 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\urls\resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'tasks.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\tasks\\urls.py'> (None:None) ''>, <URLPattern '' [name='taskview']>], [<URLResolver <module 'account.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\account\\urls.py'> (None:None) 'account/'>], [<URLResolver <module 'rest_framework.urls' from 'L:\\Programming\\Python\\Main Problem Solving\\Django\\Crms\\env\\Lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLPattern 'api/token/' [name='token_obtain_pair']>], [<URLPattern 'api/token/refresh/' [name='token_refresh']>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'accounts/login/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+WARNING 2025-07-19 00:57:42,874 log Not Found: /accounts/login/
+WARNING 2025-07-19 00:57:42,875 basehttp "GET /accounts/login/?next=/ HTTP/1.1" 404 3039
+INFO 2025-07-19 00:57:47,192 basehttp "GET / HTTP/1.1" 200 0
+DEBUG 2025-07-19 00:57:47,653 autoreload File L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\template\context_processors.py first seen with mtime 1752842012.2191195
+DEBUG 2025-07-19 00:57:47,669 autoreload File L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\contrib\messages\context_processors.py first seen with mtime 1752842009.3763871
+DEBUG 2025-07-19 00:57:47,681 autoreload File L:\Programming\Python\Main Problem Solving\Django\Crms\env\Lib\site-packages\django\contrib\auth\context_processors.py first seen with mtime 1752842007.5203822

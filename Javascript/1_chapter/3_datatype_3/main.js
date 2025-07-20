@@ -2,7 +2,23 @@
 // File: 1_chapter/datatype_3/main.js
 // datatype in JavaScript types of two types
 // 1. Primitive Data Types
+// number
+// string
+// boolean
+// undefined
+// null
+// symbol
+// bigint
 // 2. Non-Primitive Data Types
+// object
+// array
+// function
+// date
+// regexp
+// map
+// set
+// weakmap
+// weakset  
 
 // ******************************** primitive Data Types ********************************
 // Primitive data types are the most basic data types in JavaScript. They are immutable and represent

@@ -7,9 +7,11 @@
 # print(mortgageCalculator(100000, 5, 30))
 
 def calculate_mortgage(principal, annual_interest_rate, years):
+    # monthly interest rate = annual interest rate that means case yearly interest rate ÷ 12 ÷ 100
     monthly_interest_rate = annual_interest_rate / 12 / 100
     months = years * 12
 
+    # monthly payment = principal × monthly interest rate × (1 + monthly interest rate)months / ((1 + monthly interest rate)months - 1)
     if monthly_interest_rate == 0:
         emi = principal / months
     else:

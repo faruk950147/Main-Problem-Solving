@@ -15,17 +15,17 @@
 # print(a)
 
 
-# def FindComplement(num):
-#     binary = bin(num)[2:]
-#     complement = "" 
-#     for bit in binary:
-#         if bit == "1":
-#             complement += "0"
-#         else:
-#             complement += "1"
-#     return int(complement, 2) # convert binary to decimal and 2 is base of binary
+def FindComplement(num):
+    binary = bin(num)[2:]
+    complement = "" 
+    for bit in binary:
+        if bit == "1":
+            complement += "0"
+        else:
+            complement += "1"
+    return int(complement, 2) # convert binary to decimal and 2 is base of binary
     
-# a = 1
-# print(FindComplement(a))
+a = 1
+print(FindComplement(a))
     
     

@@ -165,3 +165,18 @@ body {
   padding-left: 1.5rem;
   background-color: var(--secondary-light);
 }
+
+.eye-add{
+  position: relative;
+}
+.eye-add-style{
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  color: #5bc0de;
+}
+.eyer-style-cursor{
+  cursor: pointer;
+}

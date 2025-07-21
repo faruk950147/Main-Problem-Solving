@@ -116,10 +116,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Authentication Custom User Model START
 AUTH_USER_MODEL = 'account.User'
-# AUTHENTICATION_BACKENDS = [
-#     "django.contrib.auth.backends.ModelBackend",
-#     "account.authentication.EmailAuthBackend",
-# ]
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "account.authentication.EmailAuthBackend",
+]
 
 # Authentication Custom User Model END
 

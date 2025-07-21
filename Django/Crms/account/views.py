@@ -12,7 +12,7 @@ from django.contrib.auth import logout
 from account.mixins import LogoutRequiredMixin
 from account.utils import account_activation_token
 User = get_user_model()
-import logging
+import logging  # noqa: E402
 logger = logging.getLogger(__name__)
 
 OTP_EXPIRATION_TIME = 300  # 5 minutes in seconds

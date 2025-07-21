@@ -9,4 +9,4 @@ def raffle_draw(request):
     winner = None
     if request.method == 'POST' and participants.exists():
         winner = random.choice(participants)
-    return render(request, 'raffle_draw.html', {'winner': winner, 'participants': participants})
+    return render(request, 'Draw/raffle_draw.html', {'winner': winner, 'participants': participants})

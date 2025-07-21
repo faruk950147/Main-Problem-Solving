@@ -16,9 +16,10 @@
                     <hr>
                     <h3 class="lead">Winner</h3>
                     {% if winner %}
-                        <p class="lead">Name: {{ winner.name }}</p>
-                        <p class="lead">Phone: {{ winner.phone }}</p>
-                        <p class="lead">Email: {{ winner.email }}</p>
+                        <p class="lead"> Id: {{ winner.id }}.</p>
+                        <p class="lead">Name: {{ winner.name }}.</p>
+                        <p class="lead">Phone: {{ winner.phone }}.</p>
+                        <p class="lead">Email: {{ winner.email }}.</p>
                     {% endif %}
                 </div>
             </div>
@@ -28,7 +29,7 @@
                     <h3 class="lead">All Participants:</h3>
                     <ul class="lead">
                         {% for participant in participants %}
-                            <li class="lead">Name: {{ participant.name }} - Phone: {{ participant.phone }} - Email: {{ participant.email }}</li>
+                            <li class="lead">Id: {{ participant.id }} - Name: {{ participant.name }} - Phone: {{ participant.phone }} - Email: {{ participant.email }}</li>
                         {% endfor %}
                     </ul>   
                 </div>

@@ -12,6 +12,7 @@ class RaffleDrawView(View):
     def post(self, request):
         participants = Participant.objects.all()
         if participants.exists():
+            # bulk update that is faster than updating one by one when we have all participants is false
             Participant.objects.update(is_winner=False)
             winner = random.choice(list(participants))
             winner.is_winner = True

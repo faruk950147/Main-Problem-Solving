@@ -4,7 +4,7 @@
 # Example:
 
 
-# jodi outer function er variable k inner function er moddhe hold kore rakhe
+# jodi outer function er variable k inner function er moddhe hold kore rakhe mane inner function return korbe function er variable k hold kore rakhe
 a = 10
 b = 20
 def sum(): # outer function not a closure

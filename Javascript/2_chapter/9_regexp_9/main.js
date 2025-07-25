@@ -1,7 +1,27 @@
-let str = "Hello, World!";
-let regexp = /World/;
-console.log(regexp.test(str));  // true
+// syntax
+// /pattern/modifiers/ flags
 
-let str1 = "Hello, World!";
-let regexp1 = /World/;
-console.log(regexp1.exec(str1));  // ["World", index: 7, input: "Hello, World!", groups: undefined]
+// modifiers
+// i, g, m
+
+// i - case insensitive
+// g - global
+// m - multiline
+
+// methods
+// test()
+// exec()
+// match()
+// search()
+// replace()
+// split()
+
+let str = "Hello, World!";
+let regex = /World/i;
+console.log(regex.test(str));
+console.log(regex.exec(str));
+console.log(str.match(regex));
+console.log(str.search(regex));
+console.log(str.replace(regex, "Universe"));
+console.log(str.split(regex));
+

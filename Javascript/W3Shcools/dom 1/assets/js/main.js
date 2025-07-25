@@ -53,6 +53,8 @@
 // console.log(span[0].textContent);   
 demo = document.getElementById("demo");
 const form = document.forms["form"];
+const img = document.getElementById("img");
+
 let text = "";
 for (let i = 0; i < form.length; i++) {
     text += form.elements[i].value + "\n"; // elements[i] is the input element attribute
@@ -60,4 +62,27 @@ for (let i = 0; i < form.length; i++) {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     demo.innerHTML = text;
+    img.src = "assets/2.jpg";
 });
+
+function validateForm() {
+    // const name = document.getElementById("name").value;
+    // const email = document.getElementById("email").value;
+    // const password = document.getElementById("password").value;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    if (name == "") {
+        alert("Name is required");
+        return false;
+    }
+    if (email == "") {
+        alert("Email is required");
+        return false;
+    }
+    if (password == "") {
+        alert("Password is required");
+        return false;
+    }
+    return true;
+}

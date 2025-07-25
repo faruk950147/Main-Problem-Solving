@@ -55,7 +55,7 @@ demo = document.getElementById("demo");
 const form = document.forms["form"];
 let text = "";
 for (let i = 0; i < form.length; i++) {
-    text += form.elements[i].value + "\n";
+    text += form.elements[i].value + "\n"; // elements[i] is the input element attribute
 }
 form.addEventListener("submit", (e) => {
     e.preventDefault();

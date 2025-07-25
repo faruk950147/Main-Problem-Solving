@@ -11,3 +11,7 @@ function display() {
 display.bind({a: 10, b: 20})();
 display.apply({a: 10, b: 20});
 display.call({a: 10, b: 20});
+
+display.bind({a: 10, b: 20}, 10, 20)();
+display.apply({a: 10, b: 20}, [10, 20]);
+display.call({a: 10, b: 20}, 10, 20);

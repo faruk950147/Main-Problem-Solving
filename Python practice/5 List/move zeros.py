@@ -18,7 +18,9 @@ class Solution:
         """
         pos = 0  # Index to place the next non-zero element
         for i in range(len(arr)):
+            # If the current element is not equal to the target (0)
             if arr[i] != 0:
+                # If the current index is not equal to the position index
                 if i != pos:
                     # Swap current element with the position index
                     arr[pos], arr[i] = arr[i], arr[pos]

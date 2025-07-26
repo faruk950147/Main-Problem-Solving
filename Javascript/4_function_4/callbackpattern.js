@@ -35,3 +35,37 @@ enroll(function() {
 });
 
 
+// efficient way to handle callback hell
+async function courseFlow() {
+    try {
+        console.log("Enrolling...");
+        await new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (paymentSuccess) {
+                    console.log("Payment successful");
+                    resolve();
+                } else {
+                    reject("Payment failed");
+                }
+            }, 2000);
+        });
+
+        console.log("Processing...");
+        await new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (marks >= 80) {
+                    console.log("You are eligible for certificate");
+                    resolve();
+                } else {
+                    reject("You are not eligible for the certificate");
+                }
+            }, 2000);
+        });
+
+        console.log("Getting certificate...");
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+courseFlow();

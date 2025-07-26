@@ -1,22 +1,16 @@
-// const h1 = document.getElementsByTagName("h1");
-// h1[0].innerHTML = "Hello World!";
-// const para = document.getElementsByClassName("para");
-// para[0].innerHTML = "Hello World!";
+let myWindow;
+const width = document.getElementById('width');
+const height = document.getElementById('height');
 
-const h1 = document.getElementById("h1");
-h1.innerHTML = "Hello World!";
-const para = document.querySelector(".para");
-para.innerHTML = "Hello World!";
-const btn = document.getElementById("btn");
+//  show width and height of the window
+width.innerHTML = "Width: " + window.innerWidth;
+height.innerHTML = "Height: " + window.innerHeight;
 
-// console.log(h1);
-// console.log(para);
-// console.log(btn);
-// console.dir(btn);
-// btn.onclick = function () {
-//     alert("Hello World!");
-// };
+function openWindow() {
+    myWindow = window.open("https://www.w3schools.com", "_blank", "width=400,height=400");
+}
 
-// btn.addEventListener("click", function () {
-//     alert("Hello World!");
-// });
+function closeWindow() {
+    myWindow.close();
+}
+

@@ -1,22 +1,18 @@
-// const h1 = document.getElementsByTagName("h1");
-// h1[0].innerHTML = "Hello World!";
-// const para = document.getElementsByClassName("para");
-// para[0].innerHTML = "Hello World!";
 
-const h1 = document.getElementById("h1");
-h1.innerHTML = "Hello World!";
-const para = document.querySelector(".para");
-para.innerHTML = "Hello World!";
+// event listener
+// addEventListener()
+
 const btn = document.getElementById("btn");
+const demo = document.getElementById("demo");
 
-// console.log(h1);
-// console.log(para);
-// console.log(btn);
-// console.dir(btn);
-// btn.onclick = function () {
-//     alert("Hello World!");
-// };
-
-// btn.addEventListener("click", function () {
-//     alert("Hello World!");
-// });
+btn.addEventListener("click", function () {
+    console.log("Hello World!");
+    btn.style.backgroundColor = "red";
+    btn.style.color = "white";
+    btn.style.padding = "10px";
+    btn.style.border = "none";
+    btn.style.borderRadius = "5px";
+    btn.style.cursor = "pointer";
+    btn.style.fontSize = "20px";
+    demo.style.color = "red";
+});

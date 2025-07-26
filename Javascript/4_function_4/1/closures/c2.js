@@ -1,9 +1,3 @@
-// normal function
-// function add(a, b) {
-//     return a + b;
-// }
-// console.log(add(2, 3));
-// Scope global
 
 let num1 = 80
 let num2 = 20

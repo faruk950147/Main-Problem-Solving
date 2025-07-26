@@ -1,4 +1,4 @@
-ChatGPT said:
+
 Closure হলো একটা programming concept, যা সাধারণত function আর variable scope নিয়ে কাজ করে।
 
 সোজা বাংলায় বললে:

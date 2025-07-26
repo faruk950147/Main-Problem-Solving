@@ -39,7 +39,9 @@ class Solution:
         """
         pos = 0  # Index to place the next non-zero element
         for i in range(len(arr)):
+            # If the current element is not equal to the target (0)
             if arr[i] != target:
+                # If the current index is not equal to the position index
                 if i != pos:
                     # Swap current element with the position index
                     arr[pos], arr[i] = arr[i], arr[pos]
@@ -53,7 +55,9 @@ class Solution:
     def pushZerosToFront(self, arr, target=0):
         pos = len(arr) - 1
         for i in range(len(arr) - 1, -1, -1):
+            # If the current element is not equal to the target (0)
             if arr[i] != target:
+                # If the current index is not equal to the position index
                 arr[pos] = arr[i]
                 pos -= 1
         for i in range(pos, -1, -1):
@@ -84,6 +88,7 @@ class Solution:
         
         # Copy back to original array (in-place)
         for i in range(len(arr)):
+            # Copy each element from result to arr
             arr[i] = result[i]
         return arr
 

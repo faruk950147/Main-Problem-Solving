@@ -89,6 +89,6 @@ class Operation:
                 print("Invalid choice. Please enter a number between 1 and 5.")
 
 if __name__ == "__main__":
-    crud = CRUD([])
+    crud = CRUD(["Apple", "Banana", "Cherry"]) #you can add items here or empty list crud = CRUD([])
     operation = Operation(crud)
     operation.run()

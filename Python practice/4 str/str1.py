@@ -31,12 +31,7 @@ print(str1.sort(reverse=True))
 # print(str1[6:10:2]) # index 6 to 9 step 2
 # print(str1[::-1]) # reverse string
 # print(str1[::2]) # step 2
-
 # print(str1[:5] + "Python" + str1[6:]) # index 0 to 4 + "Python" + index 6 to end
-
-
-
-
 
 # string methods
 # print(str1.ljust(20, "*")) # left justify
@@ -50,6 +45,7 @@ print(str1.sort(reverse=True))
 # print(str1.split(" "))
 # print(str1.join(" "))   
 # print(str1.find("World"))
+# print(str1.rfind("World"))
 # print(str1.index("World"))
 # print(str1.count("o"))
 # print(str1.startswith("Hello"))

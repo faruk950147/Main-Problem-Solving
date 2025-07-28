@@ -1,5 +1,6 @@
 import re
-phone_regex = r"^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$"
+phone_validator = r"^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$"
+
 
 # def phone_number(phone):
 #     if phone.startswith("+88"):
@@ -29,12 +30,11 @@ phone_regex = r"^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?
 
 
 def phone_number(phone):
-    if re.fullmatch(phone_regex, phone):
+    if re.fullmatch(phone_validator, phone):
         return True
     return False
 
 print(phone_number("+8801722222222"))
-print(phone_number("+88017222222222"))
-print(phone_number("+880172222222222"))
-print(phone_number("+8801722222222222"))
+print(phone_number("+9101722222222"))
+print(phone_number("+920172222222222"))
 

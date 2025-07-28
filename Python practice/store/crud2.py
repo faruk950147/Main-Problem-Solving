@@ -56,39 +56,39 @@ class Operation:
             print(menu)
             choice = input("Choose an option (1-5): ").strip()
 
-            if choice == '1':
-                item = input("Enter item: ").strip()
-                self.crud.create(item)
+            if choice in ['1', '2', '3', '4', '5']:
+                if choice == '1':
+                    item = input("Enter item: ").strip()
+                    self.crud.create(item)
 
-            elif choice == '2':
-                self.crud.read()
+                elif choice == '2':
+                    self.crud.read()
 
-            elif choice == '3':
-                try:
-                    index = int(input("Enter index of item to update: ").strip())
-                except ValueError:
-                    print("Invalid input! Please enter a valid integer index.")
-                    continue
-                new_item = input("Enter new item: ").strip()
-                self.crud.update(index, new_item)
+                elif choice == '3':
+                    try:
+                        index = int(input("Enter index of item to update: ").strip())
+                    except ValueError:
+                        print("Invalid input! Please enter a valid integer index.")
+                        continue
+                    new_item = input("Enter new item: ").strip()
+                    self.crud.update(index, new_item)
 
-            elif choice == '4':
-                try:
-                    index = int(input("Enter index of item to delete: ").strip())
-                except ValueError:
-                    print("Invalid input! Please enter a valid integer index.")
-                    continue
-                self.crud.delete(index)
+                elif choice == '4':
+                    try:
+                        index = int(input("Enter index of item to delete: ").strip())
+                    except ValueError:
+                        print("Invalid input! Please enter a valid integer index.")
+                        continue
+                    self.crud.delete(index)
 
-            elif choice == '5':
-                print("Exiting program. Goodbye!")
-                break
+                elif choice == '5':
+                    print("Exiting program. Goodbye!")
+                    break
 
             else:
                 print("Invalid choice. Please enter a number between 1 and 5.")
 
 if __name__ == "__main__":
-    initial_list = []
-    crud = CRUD(initial_list)
+    crud = CRUD([])
     operation = Operation(crud)
     operation.run()

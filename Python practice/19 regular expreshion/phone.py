@@ -29,12 +29,26 @@ phone_validator = r"^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-
 # phone_number("+8801722222222")
 
 
+# def phone_number(phone):
+#     if re.match(phone_validator, phone):
+#         return True
+#     return False
+
+# print(phone_number("+8801722222222"))
+# print(phone_number("+9101722222222"))
+# print(phone_number("+920172222222222"))
+
 def phone_number(phone):
-    if re.fullmatch(phone_validator, phone):
-        return True
+    with open("list.txt", "r") as file:
+        for line in file:
+            line = line.strip()
+            if re.fullmatch(phone_validator, line) and line == phone:
+                return True
     return False
 
-print(phone_number("+8801722222222"))
-print(phone_number("+9101722222222"))
-print(phone_number("+920172222222222"))
 
+
+print(phone_number("+8801712345678"))
+print(phone_number("+919812345678"))
+print(phone_number("+925512345678"))
+print(phone_number("+9301722345678"))

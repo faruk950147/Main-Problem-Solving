@@ -1,4 +1,5 @@
-def create(lst,item):
+def create(lst):
+    item = input("Enter item to add: ")
     if item:
         lst.append(item)
         print(f"'{item}' added successfully.")

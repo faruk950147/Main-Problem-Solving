@@ -8,9 +8,9 @@
 # # walrus operator is used to assign value to variable as a part of a larger expression
 # # it is used in while loop
 
-# a = 10
-# while (a := a - 1) > 0:
-#     print(a)
+a = 10
+while (a := a - 1) > 0:
+    print(a)
     
     
     
@@ -39,10 +39,12 @@
 
 # Real-life Use Case Example:
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # Find first even number
-for num in numbers:
-    if (even := num % 2 == 0):
-        print(f"First even number is: {num}")
-        break
+# for num in numbers:
+#     if (even := num % 2 == 0):
+#         print(f"First even number is: {num}")
+#         break
+#     else:
+#         print(f"First odd number is: {num}")

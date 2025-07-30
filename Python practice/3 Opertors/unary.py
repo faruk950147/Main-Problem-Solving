@@ -11,4 +11,6 @@ print(-a)
 # -10
 print(~a)
 # output
-# -11
+# Binary of 10:     00001010
+# Bitwise NOT:      11110101  (2's complement of -11)
+# Decimal: -11

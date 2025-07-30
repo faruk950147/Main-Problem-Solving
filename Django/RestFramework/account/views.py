@@ -16,13 +16,13 @@ import logging  # noqa: E402
 logger = logging.getLogger(__name__)
 # Create your views here.
 
-class SignUp(generic.View):
+class SignUp(LogoutRequiredMixin,generic.View):
     def get(self, request):
         return render(request, 'account/signup.html')
-class SignIn(generic.View):
+class SignIn(LogoutRequiredMixin,generic.View):
     def get(self, request):
         return render(request, 'account/signin.html')
-class SignOut(generic.View):
+class SignOut(LoginRequiredMixin,generic.View):
     def get(self, request):
         logout(request)
         return redirect('task_list')

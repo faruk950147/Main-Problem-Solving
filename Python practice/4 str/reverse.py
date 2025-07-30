@@ -23,3 +23,15 @@ def reverseString3(str1):
     return rev
 
 print(reverseString3("Hello World"))
+
+def compareString(str1, str2):
+    # if str1 < str2:
+    #     return True
+    # else:
+    #     return False
+    if ord(str1[0]) == ord(str2[0]):
+        return True
+    else:
+        return False
+    
+print(compareString("Hello World", "Hello Python"))

@@ -5,13 +5,23 @@
 
 a = "Hello, World!"
 encoded = a.encode()
-print(encoded)
+print("encoded", encoded)
+# output
+# encoded b'Hello, World!'
 
 decoded = encoded.decode()
-print(decoded)
+print("decoded", decoded)
+# output
+# decoded Hello, World!
 
 # encoded = a.encode("utf-8")
 # print(encoded)
+# output
+# encoded b'Hello, World!'
 
 # decoded = encoded.decode("utf-8")
 # print(decoded)
+# output
+# decoded Hello, World!'
+# output
+# decoded Hello, World!'

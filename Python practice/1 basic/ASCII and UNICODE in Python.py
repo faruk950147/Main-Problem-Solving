@@ -13,4 +13,9 @@ print(chr(65))
 print(chr(97))
 print(chr(48))
 print(chr(32))
+# output
+# 65
+# 97
+# 48
+# 32    
 

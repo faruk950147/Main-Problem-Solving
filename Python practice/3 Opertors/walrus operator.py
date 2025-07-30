@@ -1,28 +1,3 @@
-# # Ternary Operator in Python 
-# #ternary operator 3 part (condition, true, false)
-# # variable = value_if_true if condition else value_if_false
-
-# # a = 10
-# # b = 20
-# # print("a is greater than b" if a > b else "b is greater than a")
-# output
-# b is greater than a
-
-# number = 5
-# result = "Even" if number % 2 == 0 else "Odd"
-# print(result)
-# output
-# Odd
-# a = 10
-# b = 20
-# max_value = a if a > b else b
-# print(max_value)
-# output
-# 20
-
-
-
-
 # # Walrus Operator (:=) in Python
 
 # # Walrus Operator Python 3.8 introduce 

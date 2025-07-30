@@ -31,9 +31,17 @@ studentage = 20.5
 studentpassed = True
 
 print(studentname)
+# output
+# Alice
 print(astudentroll)
+# output
+# 10
 print(studentage)
+# output
+# 20.5
 print(studentpassed)
+# output
+# True
 # 2. variable name should be in snake case.
 student_name1 = "Alice"
 student_roll1 = 10
@@ -41,9 +49,17 @@ student_age1 = 20.5
 student_passed1 = True
 
 print(student_name1)
+# output
+# Alice
 print(student_roll1)
+# output
+# 10
 print(student_age1)
+# output
+# 20.5
 print(student_passed1)
+# output
+# True
 # 3. variable name should be in camel case.
 studentName_1 = "Alice"
 studentRoll_1 = 10
@@ -51,9 +67,17 @@ studentAge_1 = 20.5
 studentPassed_1 = True
 
 print(studentName_1)
+# output
+# Alice
 print(studentRoll_1)
+# output
+# 10
 print(studentAge_1)
+# output
+# 20.5
 print(studentPassed_1)
+# output
+# True
 # 4. variable name should be meaningful.
 student_name2 = "Alice"
 student_roll2 = 10
@@ -61,9 +85,17 @@ student_age2 = 20.5
 student_passed2 = True
 
 print(student_name2)
+# output
+# Alice
 print(student_roll2)
+# output
+# 10
 print(student_age2)
+# output
+# 20.5
 print(student_passed2)
+# output
+# True
 # 5. variable name should be unique.
 student_name3 = "Alice"
 student_roll3 = 10
@@ -71,9 +103,17 @@ student_age3 = 20.5
 student_passed3 = True
 
 print(student_name3)
+# output
+# Alice
 print(student_roll3)
+# output
+# 10
 print(student_age3)
+# output
+# 20.5
 print(student_passed3)
+# output
+# True
 # 6. variable name should not start with a number.
 student_name4 = "Alice"
 student_roll4 = 10
@@ -81,9 +121,17 @@ student_age4 = 20.5
 student_passed4 = True
 
 print(student_name4)
+# output
+# Alice
 print(student_roll4)
+# output
+# 10
 print(student_age4)
+# output
+# 20.5
 print(student_passed4)
+# output
+# True
 # 7. variable name should not be a keyword.
 student_name5 = "Alice"
 student_roll5 = 10
@@ -91,9 +139,17 @@ student_age5 = 20.5
 student_passed5 = True
 
 print(student_name5)
+# output
+# Alice
 print(student_roll5)
+# output
+# 10
 print(student_age5)
+# output
+# 20.5
 print(student_passed5)
+# output
+# True
 # 8. variable name should not have special characters.
 student_name6 = "Alice"
 student_roll6 = 10
@@ -101,9 +157,17 @@ student_age6 = 20.5
 student_passed6 = True
 
 print(student_name6)
+# output
+# Alice
 print(student_roll6)
+# output
+# 10
 print(student_age6)
+# output
+# 20.5
 print(student_passed6)
+# output
+# True
 # 9. variable name should not have spaces.
 student_name7 = "Alice"
 student_roll7 = 10
@@ -111,9 +175,17 @@ student_age7 = 20.5
 student_passed7 = True
 
 print(student_name7)
+# output
+# Alice
 print(student_roll7)
+# output
+# 10
 print(student_age7)
+# output
+# 20.5
 print(student_passed7)
+# output
+# True
 # 10. variable name should not have reserved keywords.
 student_name8 = "Alice"
 student_roll8 = 10
@@ -121,9 +193,19 @@ student_age8 = 20.5
 student_passed8 = True
 
 print(student_name8)
+# output
+# Alice
 print(student_roll8)
+# output
+# 10
 print(student_age8)
+# output
+# 20.5
+# output
+# 20.5
 print(student_passed8)
+# output
+# True
 # 11. variable name should not be a built-in function.  
 student_name9 = "Alice"
 student_roll9 = 10
@@ -131,9 +213,17 @@ student_age9 = 20.5
 student_passed9 = True
 
 print(student_name9)
+# output
+# Alice
 print(student_roll9)
+# output
+# 10
 print(student_age9)
+# output
+# 20.5
 print(student_passed9)
+# output
+# True
 # 12. variable name should not be a built-in module.   
 student_name10 = "Alice"
 student_roll10 = 10
@@ -141,6 +231,14 @@ student_age10 = 20.5
 student_passed10 = True
 
 print(student_name10)
+# output
+# Alice
 print(student_roll10)
+# output
+# 10
 print(student_age10)
+# output
+# 20.5
 print(student_passed10)
+# output
+# True

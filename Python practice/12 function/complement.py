@@ -16,7 +16,7 @@
 
 
 def FindComplement(num):
-    binary = bin(num)[2:]
+    binary = bin(num)[2:] # begin slice from index 2 to end [2:1:9]
     complement = "" 
     for bit in binary:
         if bit == "1":

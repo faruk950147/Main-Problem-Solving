@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
     # Your custom apps
     'account.apps.AccountConfig',
+    'tasks.apps.TasksConfig',
 ]
 
 

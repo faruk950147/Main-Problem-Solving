@@ -1,3 +1,23 @@
+def duplicate_remove_with_if(lst):
+    li = []
+    for i in lst:
+        if lst.count(i) == 1:
+            li.append(i)
+    return li
+print(duplicate_remove_with_if([1,2,2,3,3,4,5,5,5,6,6,6,7,7,7,7]))
+
+def duplicate_remove_with_set(lst):
+    return list(set(lst))
+print(duplicate_remove_with_set([1,2,2,3,3,4,5,5,5,6,6,6,7,7,7,7]))
+
+def duplicate_remove_with_count(lst):
+    li = []
+    for i in range(0, len(lst)):
+        if lst[:i].count(lst[i]) == 0:
+            li.append((i))
+    return li
+print(duplicate_remove_with_count([1,2,2,3,3,4,5,5,5,6,6,6,7,7,7,7]))
+
 # def unique_with_if(lst):
 #     li = []
 #     # for i in range(len(lst)):
